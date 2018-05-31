@@ -25,7 +25,7 @@ class Application
       add_item = req.params["item"]
       if @@items.include?(add_item)
         @@items << add_item
-        resp.write "#{search_term} added"
+        resp.write "#{add_item} added"
       else
         resp.write "We don't have that item"
       end
