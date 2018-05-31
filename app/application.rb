@@ -22,9 +22,9 @@ class Application
         resp.write "Your cart is empty"
       end
     elsif req.path.match(/add/)
-      search_term = req.params["q"]
-      if @@items.include?(search_term)
-        @@items << search_term
+      add_item = req.params["item"]
+      if @@items.include?(add_item)
+        @@items << add_item
         resp.write "#{search_term} added"
       else
         resp.write "We don't have that item"
