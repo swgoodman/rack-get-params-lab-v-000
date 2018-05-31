@@ -28,6 +28,7 @@ class Application
         resp.write "#{search_term} added"
       else
         resp.write "We don't have that item"
+      end
     elsif req.path.match(/search/)
       search_term = req.params["q"]
       resp.write handle_search(search_term)
